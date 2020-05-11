@@ -60,6 +60,7 @@ std::istream& operator>>(std::istream& in, safe_long_long_t a) {
     in >> a.Value();
     return in;
 }
+
 int main() {
     safe_long_long_t a = 2;
     std::cout << a << std::endl;  // 2
@@ -69,7 +70,6 @@ int main() {
     std::cout << (b - a) << std::endl;   // 4
     std::cout << (b > a) << std::endl;   // 1
     std::cout << (b + 1) << std::endl;   // 7
-    std::cout << (++b) << std::endl;     // не работает
     std::cout << (b++) << std::endl;     // 7
     std::cout << b << std::endl;         // 8
     std::cout << (a == 2) << std::endl;  // 1
