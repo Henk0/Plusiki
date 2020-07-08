@@ -44,7 +44,8 @@ class safe_c_array_t {
 int main() {
     auto arr = safe_c_array_t<int>(5);
     auto arr_2 = safe_c_array_t<int>(arr);
-    std::cout << arr[4] << std::endl;
-    std::cout << arr_2[4];
+    arr[4] = 1;
+    std::cout << arr[4] << std::endl;  // 1
+    std::cout << arr_2[4];             // 0
     return 0;
 }
